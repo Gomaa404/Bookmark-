@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book mark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.min.css"rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="py-5">
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div
+          class="content-box w-100 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="w-100 d-flex flex-column justify-content-center">
+            <label for="siteName" class="mb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-4"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="siteName"
+              oninput="validationForm(this)"
+            />
+          </div>
+          <div class="w-100 d-flex flex-column justify-content-center z-1">
+            <label for="siteURL" class="mb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-4"></i>Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="siteURL"
+              oninput="validationForm(this)"
+            />
+          </div>
+          <button class="btn btn-submit text-white px-5 valid" id="submitBtn" onclick="addForm()">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="container d-flex flex-column justify-content-center align-items-center mt-4">
+        <input
+          type="search"
+          class="form-control my-3 text-center text-white"
+          id="srchUrl"
+          placeholder=" search by name url "
+          oninput="searchForm()"
+        />
+        <div
+          class="row main-cat w-100 d-flex justify-content-center align-items-center bg-white text-dark py-2 text-center"
+        >
+          <div class="text-capitalize fw-bolder col-3">index</div>
+          <div class="text-capitalize fw-bolder col-3">WebsiteName</div>
+          <div class="text-capitalize fw-bolder col-3">Visit</div>
+          <div class="text-capitalize fw-bolder col-3">Delete</div>
+        </div>
+      </div>
+      <div id="dome" class="container d-flex flex-column justify-content-center align-items-center">
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
